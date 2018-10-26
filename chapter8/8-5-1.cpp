@@ -2,14 +2,17 @@
 
 using namespace std;
 
-struct Id {
+class Id {
+public:
 	int score;
 } id;
 
 int main() {
-	cin >> id.score;
+	Id *p_id = &id;
 	
-	cout << id.score;
+	cin >> p_id->score;
+	
+	cout << "Your score is " << p_id->score << endl;
 	
 	return 0;
 }
